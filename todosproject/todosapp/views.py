@@ -22,7 +22,7 @@ def Delete(request,taskid):
 
 def Edit(request,id):
     task=Task.objects.get(id=id)
-    form=Todoform(request.POST or None, instance=Task)
+    form=Todoform(request.POST or None, instance=task)
     if form.is_valid():
         form.save()
         return redirect('/')
