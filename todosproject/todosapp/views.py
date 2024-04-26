@@ -26,4 +26,4 @@ def Edit(request,id):
     if form.is_valid():
         form.save()
         return redirect('/')
-    return render(request,'edit.html',{'task':task},{'form':form})
+    return render(request,'edit.html',{'task':task,'form':form})
